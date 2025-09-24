@@ -15,9 +15,9 @@ title: Vue d'ensemble
 ## Équipe
 
 - **`M1`:** Hamza Aqel (matricule) #nom-utilisateur
-- **`M2`:** Membre 2 (matricule) #nom-utilisateur
-- **`M3`:** Membre 3 (matricule) #nom-utilisateur  
-- **`M4`:** Membre 4 (matricule) #nom-utilisateur
+- **`M2`:** Nouh Harfouche (matricule) #nom-utilisateur
+- **`M3`:** Farah Romdhane (matricule) #nom-utilisateur  
+- **`M4`:** Samah Tanisha Islam (matricule) #nom-utilisateur
 
 ## Description du projet
 
