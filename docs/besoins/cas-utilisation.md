@@ -6,7 +6,8 @@ title: Analyse des besoins - Cas d'utilisation
 
 ## Vue d’ensemble
 
-TODO: Introduction aux cas d’utilisation du système. (ajouter photo diagramme CU)
+Introduction aux cas d’utilisation du système.
+
 ![Diagramme des cas d'utilisation](Diagramme_CUs.png)
 
 ## Liste des cas d’utilisation
