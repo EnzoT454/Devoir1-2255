@@ -6,7 +6,9 @@ title: Analyse des besoins - Cas d'utilisation
 
 ## Vue d’ensemble
 
-TODO: Introduction aux cas d’utilisation du système. (ajouter photo diagramme CU)
+Introduction aux cas d’utilisation du système.
+
+![Diagramme des cas d'utilisation](Diagramme_CUs.png)
 
 ## Liste des cas d’utilisation
 
@@ -133,7 +135,7 @@ TODO: Introduction aux cas d’utilisation du système. (ajouter photo diagramme
 **PostConditions** : Les informations du cours sont affichées à l’écran
 **Déclencheur** : L’étudiant sélectionne un cours dans la liste de résultats (CU04)
 **Dépendances** : CU04 (Recherche cours), CU07 (Mise à jour cours)
-**But** : Permettre à l’étudiant de consulter le plan, l’horaire, le professeur, les résultats académiques et les avis d’un cours
+**But** : Permettre à l’étudiant de consulter le plan, l’horaire, le professeur, les résultats académiques et les avis d’un cours(s'il ya au moins 5 avis)
 
 ### Scénario principal
 
@@ -156,18 +158,19 @@ TODO: Introduction aux cas d’utilisation du système. (ajouter photo diagramme
 ### CU06 - Comparaison de cours
 
 **Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire)
-**Préconditions** : L’étudiant doit être connecté (CU01) et avoir sélectionné plusieurs cours
+**Préconditions** : L’étudiant doit être connecté (CU01) et avoir sélectionné au moins deux cours
 **PostConditions** : Un tableau comparatif est affiché à l’étudiant
-**Déclencheur** : L’étudiant sélectionne l’option “Comparer” après avoir choisi des cours
+**Déclencheur** : L’étudiant clique sur l’option « Comparer » dans son panier après avoir choisi plusieurs cours.=
 **Dépendances** : CU04 (Recherche cours), CU05 (Infos cours)
-**But** : Permettre à l’étudiant de comparer plusieurs cours selon des critères (charge, difficulté, taux de réussite)
+**But** : Permettre à l’étudiant de comparer plusieurs cours selon des critères (charge, difficulté, taux de réussite, retours d'autres étudiants)
 
 ### Scénario principal
 
-1. L’étudiant sélectionne plusieurs cours depuis la **recherche**.  
-2. Le système récupère pour chaque cours : **charge estimée**, **taux de réussite**, **difficulté perçue**.  
-3. Le système affiche un **tableau comparatif clair**.  
-4. L’étudiant consulte et choisit la **combinaison la plus adaptée**.  
+1. L’étudiant ajoute plusieurs cours dans son panier depuis la **recherche**. 
+2. L'étudiant va dans son panier et sélectionne **comparer les cours**. 
+3. Le système récupère pour chaque cours : **charge estimée**, **taux de réussite**, **difficulté perçue**, **avis**.  
+4. Le système affiche un **tableau comparatif clair**.  
+5. L’étudiant consulte et choisit la **combinaison la plus adaptée**.  
 
 
 ### Scénarios alternatifs
@@ -177,7 +180,11 @@ TODO: Introduction aux cas d’utilisation du système. (ajouter photo diagramme
 
 ### 2a. Les données pour un des cours sont incomplètes
 - **2a.1** Le système affiche un avertissement *« Informations partielles pour ce cours »*.  
+- **2a.2** Le tableau reste affiché avec les données disponibles.
 
+### 3a. API Planifium ou Discord est inaccessible:
+- **2a.1** Le système affiche un message *« Les données externes ne sont pas accessibles pour le moment »*.  
+- **2a.2** Le tableau est généré avec uniquement les données internes disponibles.
 ---
 
 ### CU07 - Mise à jour des cours
