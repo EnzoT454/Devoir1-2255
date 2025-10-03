@@ -17,7 +17,7 @@ title: Vue d'ensemble
 
 - **`M1`:** Hamza Aqel (20111814) Enzo
 - **`M2`:** Nouh Harfouche (matricule) #nom-utilisateur
-- **`M3`:** Farah Romdhane (matricule) #nom-utilisateur  
+- **`M3`:** Farah Romdhane (20288662) Farah 
 - **`M4`:** Samah Tanisha Islam (matricule) #nom-utilisateur
 
 
@@ -36,7 +36,7 @@ title: Vue d'ensemble
 | Personas                      | 29 septembre  | ⏳ À venir  | `M`         |
 | Cas d'utilisation             | 3 octobre     | ✅ À venir  | `M1`         |
 | Diagramme d'activités         | 6 octobre     | ⏳ À venir  | `M`         |
-| Modèle C4                     | 6 octobre     | ⏳ À venir  | `M`         |
+| Modèle C4                     | 6 octobre     | ⏳ À venir  | `M3`         |
 | Prototype fonctionnel (bonus) | 10 octobre    | ⏳ À venir  | `M1`         |
 | Rapport                       | 10 octobre    | ⏳ À venir  | `M`         |
 
