@@ -34,7 +34,7 @@ title: Vue d'ensemble
 | Exigences Fonct et Non-Fonct  | 26 septembre  | ⏳ À venir  | `M` `M`    |
 | Évaluation des risques        | 26 septembre  | ⏳ À venir  | `M`         |
 | Personas                      | 29 septembre  | ⏳ À venir  | `M`         |
-| Cas d'utilisation             | 3 octobre     | ⏳ À venir  | `M1`         |
+| Cas d'utilisation             | 3 octobre     | ✅ À venir  | `M1`         |
 | Diagramme d'activités         | 6 octobre     | ⏳ À venir  | `M`         |
 | Modèle C4                     | 6 octobre     | ⏳ À venir  | `M`         |
 | Prototype fonctionnel (bonus) | 10 octobre    | ⏳ À venir  | `M1`         |
