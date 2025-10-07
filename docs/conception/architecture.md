@@ -23,4 +23,5 @@ title: Conception - Architecture
 - Format des données : JSON, XML, etc.
 
 ## Diagramme d’architecture (Modèle C4)
-hellooo 
+![Diagramme d’architecture](./C4_niveau1.png)
+
