@@ -50,3 +50,21 @@ Ainsi, les diagrammes montrent clairement comment les acteurs atteignent leurs o
 
 ### Description des flux complexes
 
+Dans certains cas, les activités ne se déroulent pas toujours de manière simple.Il peut y avoir plusieurs chemins possibles ou des interactions avec des services externes :
+
+**CU01 – Connexion :** selon que les identifiants sont corrects ou non, l’étudiant peut être renvoyé pour ressaisir son mot de passe ou être invité à s’inscrire s’il n’a pas de compte.
+
+**CU02 – Inscription :** le système vérifie que le courriel n’est pas déjà utilisé et que tous les champs obligatoires sont remplis. Si un champ est manquant, l’étudiant doit le compléter ; si le courriel existe déjà, un message l’informe et il peut choisir de se connecter à la place.
+
+**CU03 – Profil :** l’étudiant peut modifier ses préférences. il dépend de la connexion préalable (CU01), et les modifications sont enregistrées pour personnaliser ses recommandations.
+
+**CU04 – Recherche cours :** l’étudiant saisit un critère de recherche et le système interroge l’API Planifium. Si aucun cours ne correspond, un message est affiché. Si l’API est indisponible, le flux s’arrête et l’étudiant est informé.
+
+**CU05 – Infos cours :** lorsque l’étudiant sélectionne un cours, le système récupère les informations détaillées (plan, horaires, professeur, résultats académiques et avis). Si les avis sont insuffisants ou que certains résultats ne sont pas disponibles, le système adapte l’affichage en conséquence.
+
+**CU06 – Comparaison de cours :** pour comparer plusieurs cours, les informations sont récupérées puis regroupées dans le tableau final à l’étudiant .Si l’étudiant n’a sélectionné qu’un seul cours, un message lui demande de choisir au moins deux cours. Si certaines données sont incomplètes ou si les services externes sont indisponibles, le tableau est généré avec ce qui est disponible.
+
+**CU07 – Mise à jour des cours :** l’administrateur accède à l’interface pour corriger ou compléter les données dans l’API. Une fois les modifications appliquées, les informations sont enregistrées et mises à jour pour tous les étudiants.
+
+---
+Ces flux complexes montrent comment le système gère les erreurs, les boucles et la communication avec des services externes, tout en garantissant que les utilisateurs peuvent atteindre leurs objectifs dans différentes situations.
