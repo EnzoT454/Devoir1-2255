@@ -5,26 +5,51 @@ title: Analyse des besoins - Exigences
 # Exigences
 
 ## Exigences fonctionnelles
-
-TODO: Liste des fonctions que le système doit accomplir.
-
-Exemple :
-
-- [ ] EF1 : L’utilisateur peut créer un compte.
-- [ ] EF2 : Le système envoie un courriel de confirmation.
+- [ ] EF1 : L'étudiant peut s'inscrire à la plateforme avec ses identifiants UdeM
+- [ ] EF2 : L'étudiant peut se connecter à la plateforme
+- [ ] EF3 : L'étudiant peut personaliser son profil
+- [ ] EF4 : L'étudiant peut rechercher des cours par son code pu son titre
+- [ ] EF5 : L'étudiant peut consulter les informations complètes d'un cours (horaire, professeur, plan de cours, etc)
+- [ ] EF6 : Le système permet d'afficher les avis étudiants après un mimimum de 5 avis
+- [ ] EF7 : Le système permet à un étudiant de soumettre un avis à propos d'un cours via Discord
+- [ ] EF8  : Le système permet à l'étudiant de mettre des cours dans son panier et de s'y inscrire ainsi que s'y désinscrire 
+- [ ] EF9 : L'étudiant peut comparer plusieurs cours
+- [ ] EF10 : L'étudiant peut accéder à son horaire 
+- [ ] EF11 : Le système centralise dans une interface les données de Planifium et des avis Discord 
 
 ## Exigences non fonctionnelles
 
 TODO: Contraintes de performance, sécurité, compatibilité, etc.
 
-Exemple :
 
-- [ ] ENF1 : Le système doit répondre en moins de 2 secondes.
-- [ ] ENF2 : L'application doit être compatible avec Chrome et Firefox.
+- [ ] ENF1 : Interface simple et claire pour tous les étudiants
+- [ ] ENF2 : Compatible avec les navigateurs (Firefox, Google, Safari)
+- [ ] ENF3 : Aucune données personelle identifiable (conformité Loi 25)
+
 
 ## Priorisation
 
 TODO: Identifier les exigences critiques.
+
+### Exigences Critique
+- EF1: Authentification (Accès sécurisé à la plateforme)
+- EF2 : Connexion à la plateforme
+- EF4 : Recherche de cours
+- EF6 : Affichage des avis 
+- EF8 : Gestion du panier 
+- EF9 : Compaison des cours
+- EF11 : Centralisation des données
+- ENF1 : Interface utilisateur
+- ENF3 : Confidentialité
+
+##  Exigences secondaire
+- EF3 : Profil personnel
+- EF7 : Soumission d'avis
+- EF10 : Consultation horaire
+- ENF2 : Compatibilité avec les navigateurs
+
+
+
 
 ## Types d'utilisateurs
 
@@ -32,9 +57,9 @@ TODO: Identifier les exigences critiques.
 
 | Type d’utilisateur | Description | Exemples de fonctionnalités accessibles |
 |--------------------|-------------|------------------------------------------|
-| Utilisateur invité | Accès limité, pas d’authentification | Consultation des ressources |
-| Utilisateur authentifié | Compte personnel, fonctions principales | Réservation, historique |
-| Administrateur | Droits étendus, gestion des ressources | Création/suppression de ressources, gestion des utilisateurs |
+| Utilisateur non authentifié | Accès limité sans connexion | Consultation basique des cours, recherche simple |
+| Utilisateur authentifié | Utilisateur connecté | Recherche, gestion du panier, soumission avis, comparaisons de cours |
+| Administrateur | Gestionnaire de la plateforme | Création/suppression de ressources, gestion des utilisateurs, gestion des données|
 
 <!-- TODO: Détailler selon le périmètre du projet. -->
 
@@ -45,6 +70,4 @@ TODO: Identifier les exigences critiques.
 - Le système sera hébergé sur un serveur Ubuntu 22.04.
 - Base de données : PostgreSQL version 15.
 - Serveur Web : Nginx + Gunicorn (pour une app Python, par exemple).
-- Framework principal : [À spécifier selon le projet].
-
-<!-- TODO: Compléter selon le stack technique prévu. -->
+- Framework principal : Springboot
