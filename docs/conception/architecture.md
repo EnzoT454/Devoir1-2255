@@ -24,3 +24,4 @@ title: Conception - Architecture
 
 ## Diagramme d’architecture (Modèle C4)
 ![Diagramme d’architecture - Niveau 1](./C4_niveau1.png)
+![Diagramme d’architecture - Niveau 2](./C4_niveau2.png)
