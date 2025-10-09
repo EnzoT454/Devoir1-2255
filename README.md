@@ -1,6 +1,4 @@
-# Template de site web pour IFT2255
 
-Ce projet est un template pour le rapport à produire pour le cours IFT2255 (Génie logiciel), construit avec [MkDocs](https://www.mkdocs.org/) et le thème [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 ## CoursAdvisor (Brève description)
  
@@ -35,7 +33,13 @@ Devoir1-2255/
 ├─ mkdocs.yml                    → Fichier de configuration MkDocs  
 ├─ requirements.txt              → Dépendances Python  
 ├─ Pipfile                       → Environnement virtuel (pipenv)  
-└─ README.md                     → Description du projet   
+└─ README.md                     → Description du projet  
+
+
+
+# Template de site web pour IFT2255
+
+Ce projet est un template pour le rapport à produire pour le cours IFT2255 (Génie logiciel), construit avec [MkDocs](https://www.mkdocs.org/) et le thème [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 ## Prérequis
 
