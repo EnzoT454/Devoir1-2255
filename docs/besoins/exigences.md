@@ -60,6 +60,8 @@ title: Analyse des besoins - Exigences
 > Informations sur l’environnement d’exécution cible, les outils ou plateformes nécessaires.
 
 - Le système sera hébergé sur un serveur Ubuntu 22.04.
+- Langage principal : Java
+- Frontend : HTML, CSS et JavaScript
 - Base de données : PostgreSQL version 15.
-- Serveur Web : Nginx + Gunicorn (pour une app Python, par exemple).
+- Serveur Web : Nginx 
 - Framework principal : Springboot
