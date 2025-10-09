@@ -8,18 +8,14 @@ title: Analyse des besoins - Exigences
 - [ ] EF1 : L'étudiant peut s'inscrire à la plateforme avec ses identifiants UdeM
 - [ ] EF2 : L'étudiant peut se connecter à la plateforme
 - [ ] EF3 : L'étudiant peut personaliser son profil
-- [ ] EF4 : L'étudiant peut rechercher des cours par son code pu son titre
+- [ ] EF4 : L'étudiant peut rechercher des cours par son code ou son titre
 - [ ] EF5 : L'étudiant peut consulter les informations complètes d'un cours (horaire, professeur, plan de cours, etc)
 - [ ] EF6 : Le système permet d'afficher les avis étudiants après un mimimum de 5 avis
-- [ ] EF7 : Le système permet à un étudiant de soumettre un avis à propos d'un cours via Discord
-- [ ] EF8  : Le système permet à l'étudiant de mettre des cours dans son panier et de s'y inscrire ainsi que s'y désinscrire 
-- [ ] EF9 : L'étudiant peut comparer plusieurs cours
-- [ ] EF10 : L'étudiant peut accéder à son horaire 
-- [ ] EF11 : Le système centralise dans une interface les données de Planifium et des avis Discord 
+- [ ] EF7 : L'étudiant peut comparer plusieurs cours
+- [ ] EF8 : Le système centralise dans une interface les données de Planifium, des avis Discord anisi que les résultats académiques 
 
 ## Exigences non fonctionnelles
 
-TODO: Contraintes de performance, sécurité, compatibilité, etc.
 
 
 - [ ] ENF1 : Interface simple et claire pour tous les étudiants
@@ -29,23 +25,20 @@ TODO: Contraintes de performance, sécurité, compatibilité, etc.
 
 ## Priorisation
 
-TODO: Identifier les exigences critiques.
 
 ### Exigences Critique
 - EF1: Authentification (Accès sécurisé à la plateforme)
 - EF2 : Connexion à la plateforme
 - EF4 : Recherche de cours
 - EF6 : Affichage des avis 
-- EF8 : Gestion du panier 
-- EF9 : Compaison des cours
+- EF8 : Gestion de la section de comparaison
+- EF9 : Comparaison des cours
 - EF11 : Centralisation des données
 - ENF1 : Interface utilisateur
 - ENF3 : Confidentialité
 
 ##  Exigences secondaire
 - EF3 : Profil personnel
-- EF7 : Soumission d'avis
-- EF10 : Consultation horaire
 - ENF2 : Compatibilité avec les navigateurs
 
 
@@ -57,11 +50,10 @@ TODO: Identifier les exigences critiques.
 
 | Type d’utilisateur | Description | Exemples de fonctionnalités accessibles |
 |--------------------|-------------|------------------------------------------|
-| Utilisateur non authentifié | Accès limité sans connexion | Consultation basique des cours, recherche simple |
-| Utilisateur authentifié | Utilisateur connecté | Recherche, gestion du panier, soumission avis, comparaisons de cours |
+| Utilisateur non authentifié | Accès limité sans connexion | Accès à la page d'inscription |
+| Utilisateur authentifié | Utilisateur connecté | Recherche, personalise profil, comparaisons de cours |
 | Administrateur | Gestionnaire de la plateforme | Création/suppression de ressources, gestion des utilisateurs, gestion des données|
 
-<!-- TODO: Détailler selon le périmètre du projet. -->
 
 ## Infrastructures
 

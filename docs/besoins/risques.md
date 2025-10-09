@@ -7,7 +7,7 @@ title: Analyse des besoins - Risques
 ## Identification des risques
 
 
-### Risque 1 – Données insiffisantes pour les avis
+### Risque 1 – Données insuffisantes pour les avis
 
 - **Probabilité** : Élevée
 - **Sévérité** : Moyenne 
@@ -35,6 +35,7 @@ title: Analyse des besoins - Risques
   - Ajouter un indicateur de fiabilité associé à chaque ensemble d'avis, basé sur le nombre de retours et la diversité des participants 
 
 ### Risque 4 - Dépendance aux données officielles
+- **Problème** : externe (dépendance aux sources de données)
 - **Probabilité** : Moyenne  
 - **Sévérité** : Moyenne 
 - **Impact** : Une indisponibilité ou une mise à jour tardive de Planifium ou des résultats académiques limiterait la fiabilité du système.
@@ -42,7 +43,14 @@ title: Analyse des besoins - Risques
   - Mettre en place une sauvegarde locale des données Planifium
   - Ajouter une fonction de mise à jour manuelle pour les administrateurs
 
-
+### Risque 5 – Fiabilité et performance du système
+- **Problème** : interne (architecture et charge du système)
+- **Probabilité**  : Moyenne
+- **Sévérité** : Élevée
+- **Impact** : Si le serveur subit des ralentissements (lenteur des appels API, surcharge, erreurs de connexion), les utilisateurs peuvent abandonner la plateforme, réduisant ainsi son adoption.
+- **Plan de mitigation** :
+  - Mettre en place un cache local pour éviter d’appeler trop souvent l’API Planifium.
+  - Effectuer des tests de charge avant la mise en ligne.
 
 ## Modification du processus opérationnel
 
