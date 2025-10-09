@@ -3,7 +3,7 @@
 ## CoursAdvisor (Brève description)
  
 **CoursAdviso** est une plateforme web destinée aux étudiants du DIRO (Université de Montréal).
-Elle centralise les données provenant de Planifium, des résultats académiques et des avis étudiants collectés via Discord, afin d’aider les étudiants à choisir leurs cours de manière éclairée.
+Elle centralise les données provenant de Planifium, des résultats académiques fournis par les enseignants ou les auxiliaires et des avis étudiants collectés via Discord, afin d’aider les étudiants à choisir leurs cours de manière éclairée.
 L’application permet de rechercher, comparer et consulter des cours tout en personnalisant les recommandations selon le profil de l’étudiant.
 
 ## 🗂️ Organisation du répertoire
