@@ -8,7 +8,7 @@ title: Analyse des besoins - Cas d'utilisation
 
 Introduction aux cas d’utilisation du système.
 
-![Diagramme des cas d'utilisation](Diagramme_CUs.png)
+![Diagramme des cas d'utilisation](diagrammes/DiagrammeCUs.png)
 
 ## Liste des cas d’utilisation
 
