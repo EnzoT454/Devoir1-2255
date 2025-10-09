@@ -12,11 +12,11 @@ title: Analyse des besoins - Présentation générale
 
 ### Fonctionnement
 Le système est basé sur une architecture client–serveur:
-- Le frontend (HTML, CSS, JavaScript) offre une interface qui permettant aux étudiants de naviguer facilement dans la plateforme et interagir avec les fonctionalités principales
-- Le backend (Java / Spring Boot) assure la logique, la gestion des requêtes et la communication entre le frontend et la base de données ;
+- Le frontend (HTML, CSS, JavaScript) offre une interface qui permet aux étudiants de naviguer facilement dans la plateforme et interagir avec les fonctionalités principales
+- Le backend (Java / Spring Boot) assure la logique, la gestion des requêtes et la communication entre le frontend et la base de données
 - La base de données (PostgreSQL) stocke les cours, les utilisateurs et les avis
 - Le serveur Nginx utilisé comme proxy inverse pour diriger les requêtes entre le frontend et le backend, tout en aidant à sécuriser les échanges.
-- L’application est déployée sur un serveur Ubuntu 22.04 LTS.
+- L’application est déployée sur un serveur Ubuntu 22.04
 
 
 ### Acteurs
@@ -32,7 +32,7 @@ Le système est basé sur une architecture client–serveur:
 ### Dépendances
 - Backend : Spring Boot 
 - Frontend : HTML, CSS, JavaScript
-- Serveur : Ubuntu 22.04 LTS
+- Serveur : Ubuntu 22.04
 - Serveur web : Nginx
 
 
