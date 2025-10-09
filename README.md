@@ -2,8 +2,40 @@
 
 Ce projet est un template pour le rapport à produire pour le cours IFT2255 (Génie logiciel), construit avec [MkDocs](https://www.mkdocs.org/) et le thème [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
-## Documentation 
-Ce projet est  
+## CoursAdvisor (Brève description)
+ 
+**CoursAdviso** est une plateforme web destinée aux étudiants du DIRO (Université de Montréal).
+Elle centralise les données provenant de Planifium, des résultats académiques et des avis étudiants collectés via Discord, afin d’aider les étudiants à choisir leurs cours de manière éclairée.
+L’application permet de rechercher, comparer et consulter des cours tout en personnalisant les recommandations selon le profil de l’étudiant.
+
+## 🗂️ Organisation du répertoire
+
+
+Devoir1-2255/
+├─ docs/
+│  ├─ besoins/
+│  │  ├─ cas-utilisation.md      → Cas d’utilisation et scénarios
+│  │  ├─ exigences.md            → Analyse des besoins 
+│  │  ├─ flux-principaux.md      → Diagramme des flux d’informations
+│  │  ├─ glossaire.md            → Définitions des termes utilisés
+│  │  ├─ risques.md              → Analyse des risques
+│  ├─ conception/
+│  │  ├─ architecture.md         → Description de l’architecture globale
+│  │  ├─ C4_niveau1.png          → Modèle C4 – niveau 1
+│  │  ├─ C4_niveau2.png          → Modèle C4 – niveau 2 
+│  │  ├─ uml.md                  → Diagrammes UML
+│  │  └─ modeles.md              → Schémas et modèles de données
+│  ├─ css/
+│  │  └─ no-sidebar.css          → Feuille de style personnalisée
+│  ├─ application.md             → Documentation sur l’application
+│  ├─ evaluation.md              → Évaluation du projet
+│  ├─ bilan.md                   → Bilan final
+│  └─ index.md                   → Page d’accueil du site MkDocs
+│
+├─ mkdocs.yml                    → Fichier de configuration MkDocs
+├─ requirements.txt              → Dépendances Python
+├─ Pipfile                       → Environnement virtuel (pipenv)
+└─ README.md                     → Description du projet 
 
 ## Prérequis
 
