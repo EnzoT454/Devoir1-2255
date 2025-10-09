@@ -28,11 +28,11 @@ title: Vue d'ensemble
 | Taches                        | Terminé le    | Statut      | Responsable  |
 |-------------------------------|---------------|-------------|--------------|
 | Ouverture de projet           | 12 septembre  | ✅ Terminé  | `M`          |
-| Description du domaine        | 19 septembre  | 🔄 En cours | `M`          |
+| Description du domaine        | 9 octobre     | 🔄 En cours | `M4`         |
 | Identification des acteurs    | 19 septembre  | 🔄 En cours | `M`          |
-| Glossaire                     | 21 septembre  | ⏳ À venir  | `M`          |
-| Exigences Fonct et Non-Fonct  | 26 septembre  | ⏳ À venir  | `M`          |
-| Évaluation des risques        | 26 septembre  | ⏳ À venir  | `M`          |
+| Glossaire                     | 7 octobre     | ✅ Terminé  | `M4`         |
+| Exigences Fonct et Non-Fonct  | 9 octobre     | ✅ Terminé  | `M4`         |
+| Évaluation des risques        | 7 octobre     | ✅ Terminé  | `M4`         |
 | Personas                      | 29 septembre  | ⏳ À venir  | `M`          |
 | Cas d'utilisation             | 3 octobre     | ✅ Terminé  | `M1`         |
 | Diagramme d'activités         | 6 octobre     | ✅ Terminé  | `M2`         |
