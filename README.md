@@ -2,6 +2,9 @@
 
 Ce projet est un template pour le rapport à produire pour le cours IFT2255 (Génie logiciel), construit avec [MkDocs](https://www.mkdocs.org/) et le thème [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
+## Documentation 
+Ce projet est  
+
 ## Prérequis
 
 Assurez-vous d’avoir les outils suivants installés :
