@@ -38,5 +38,5 @@ title: Vue d'ensemble
 | Diagramme d'activités         | 6 octobre     | ✅ Terminé  | `M2`         |
 | Modèle C4                     | 6 octobre     | ✅ Terminé  | `M3`         |
 | Prototype fonctionnel (bonus) | 9 octobre     | ✅ Terminé  | `M1`         |
-| Rapport                       | 10 octobre    | ✅ À venir  | `M3`         |
+| Rapport                       | 10 octobre    | ✅ Terminé  | `M3`         |
 
