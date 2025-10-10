@@ -122,9 +122,6 @@ Introduction aux cas d’utilisation du système.
 - **3a.1** Le système affiche *« Aucun cours trouvé »*.  
 - **3a.2** Le scénario se termine.  
 
-### 3b. L’API Planifium est indisponible
-- **3b.1** Le système affiche *« Service temporairement indisponible »*.  
-- **3b.2** Le scénario se termine.  
 
 ---
 
