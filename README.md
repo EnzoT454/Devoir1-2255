@@ -41,7 +41,9 @@ Devoir1-2255/
 
 Voici le lien permettant de visualiser le prototype interactif initial [Prototype](https://www.figma.com/make/oLDVLNKRifwxeUm5kLpRos/CourAdvisor--Copy-?node-id=0-1&p=f&t=6YJ55hxH3yMLNSCu-0&fullscreen=1).
 
-Pour vous connecter, vous pouvez utiliser une adresse courriel au format suivant : aaaaa@aa.aa, ainsi que n’importe quel mot de passe.
+Le prototype de CoursAdvisor comporte quatre pages principales. D’abord, la page d’accueil permet de se connecter ou de créer un compte étudiant à l’aide d’un courriel UdeM . Ensuite, la page du catalogue affiche la liste des cours avec leurs notes, difficultés et descriptions; l’utilisateur peut consulter les détails ou ajouter des cours à la comparaison. La page de comparaison permet d’analyser les cours à la fois selon leur charge de travail, difficulté et crédits .Enfin la page du profil permet d’ajuster les préférences pour personnaliser les recommandations.    
+
+Note : Pour vous connecter, vous pouvez utiliser une adresse courriel au format suivant : aaaaa@aa.aa, ainsi que n’importe quel mot de passe.
 
 
 ## Prérequis
