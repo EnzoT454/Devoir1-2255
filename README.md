@@ -8,10 +8,11 @@ L’application permet de rechercher, comparer et consulter des cours tout en pe
 
 ## 🗂️ Organisation du répertoire
 
-
+```text
 Devoir1-2255/  
 ├─ docs/  
-│  ├─ besoins/  
+│  ├─ besoins/
+│  │  ├─ diagrammes              → Dossier contenant les diagrammes flux + CUs 
 │  │  ├─ cas-utilisation.md      → Cas d’utilisation et scénarios  
 │  │  ├─ exigences.md            → Analyse des besoins   
 │  │  ├─ flux-principaux.md      → Diagramme des flux d’informations  
@@ -20,7 +21,7 @@ Devoir1-2255/
 │  ├─ conception/  
 │  │  ├─ architecture.md         → Description de l’architecture globale  
 │  │  ├─ C4_niveau1.png          → Modèle C4 – niveau 1  
-│  │  ├─ C4_niveau2.png          → Modèle C4 – niveau 2   
+│  │  └─ C4_niveau2.png          → Modèle C4 – niveau 2   
 |  |
 │  ├─ css/  
 │  │  └─ no-sidebar.css          → Feuille de style personnalisée   
@@ -30,14 +31,14 @@ Devoir1-2255/
 ├─ requirements.txt              → Dépendances Python  
 ├─ Pipfile                       → Environnement virtuel (pipenv)  
 └─ README.md                     → Description du projet  
-
+```
 
 
 ## Prototype interactif
 
 Voici le lien permettant de visualiser le prototype interactif initial [Prototype](https://www.figma.com/make/oLDVLNKRifwxeUm5kLpRos/CourAdvisor--Copy-?node-id=0-1&p=f&t=6YJ55hxH3yMLNSCu-0&fullscreen=1).
 
-Le prototype de CoursAdvisor comporte quatre pages principales. D’abord, la page d’accueil permet de se connecter ou de créer un compte étudiant à l’aide d’un courriel UdeM . Ensuite, la page du catalogue affiche la liste des cours avec leurs notes, difficultés et descriptions; l’utilisateur peut consulter les détails ou ajouter des cours à la comparaison. La page de comparaison permet d’analyser les cours à la fois selon leur charge de travail, difficulté et crédits .Enfin la page du profil permet d’ajuster les préférences pour personnaliser les recommandations .    
+Le prototype de CoursAdvisor comporte quatre pages principales. D’abord, la page d’accueil permet de se connecter ou de créer un compte étudiant à l’aide d’un courriel UdeM . Ensuite, la page du catalogue affiche la liste des cours avec leurs notes, difficultés et descriptions; l’utilisateur peut consulter les détails ou ajouter des cours à la comparaison. La page de comparaison permet d’analyser les cours à la fois selon leur charge de travail, difficulté et crédits .Enfin la page du profil permet d’ajuster les préférences pour personnaliser les recommandations.    
 
 Note : Pour vous connecter, vous pouvez utiliser une adresse courriel au format suivant : aaaaa@aa.aa, ainsi que n’importe quel mot de passe.
 
