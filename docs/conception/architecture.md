@@ -6,21 +6,28 @@ title: Conception - Architecture
 
 ## Vue d’ensemble
 
-- Description du type d’architecture retenue (ex. : monolithique, microservices, REST...)
-- Raisons du choix
+### Description du type d’architecture retenue :  
+Le système CoursAdvisor adopte une architecture en couches orientée services **REST**.
+Il s’agit d’un système web distribué composé de trois principaux conteneurs (frontend, backend et base de données) interagissant via des API HTTP REST et des échanges de données au format JSON.
+L’application communique également avec des services externes tels que l’API Planifium (pour les informations de cours) et Discord (pour la centralisation des avis étudiants).  
+### Raisons du choix :  
+  - Permet une séparation claire des responsabilités (présentation, logique métier, données).
+  - Facilite l’évolutivité (possibilité de modifier un module sans impacter les autres).
+  - Compatible avec les intégrations externes (API Planifium et Discord).  
 
-## Composants principaux
+## Composants principaux  
 
-- Liste des modules ou services :
-  - Module d’authentification
-  - Gestion des utilisateurs
-  - Interface (frontend)
-  - API backend
+- Interface (frontend)  
+- Backend (Java)  
+- Base de données  
+- API Planifium (externe)  
+- Discord (externe)  
+- Profs/ auxiliaires (externe)
 
 ## Communication entre composants
 
-- Mécanismes d’échange : appels HTTP, WebSocket, messages, etc.
-- Format des données : JSON, XML, etc.
+- Mécanismes d’échange : appels HTTP, requetes SQL.
+- Format des données : JSON, CSV.
 
 ## Diagramme d’architecture (Modèle C4)
 
