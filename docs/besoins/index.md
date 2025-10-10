@@ -23,8 +23,7 @@ Le système est basé sur une architecture client–serveur:
 | Acteur | Rôle principal | Objectifs |
 |-------------|--------------------|----------------|
 | Étudiant utilisateur | Utilisateur principal du système | Consulter les cours, s’inscrire ou se désinscrire, consulter ou publier des avis sur les cours et enseignants. |
-| Professeurs / Auxiliaires d’enseignement | Fournisseurs d’information pédagogique | fournissent les plans de cours et mettent
-à jour les informations en lien avec un cours|
+| Professeurs / Auxiliaires d’enseignement | Fournisseurs d’information pédagogique et de résultats académiques | fournissent les plans de cours et mettent à jour les informations en lien avec un cours|
 | API| Source de données | Fournir les données officielles relatives aux cours, aux horaires et aux inscriptions |
 | Discord | Plateforme de communication externe | Faciliter les échanges entre étudiants et consultation des avis sur les cours |
 
@@ -38,7 +37,12 @@ Le système est basé sur une architecture client–serveur:
 
 ## Hypothèses et contraintes
 
-TODO: Liste des hypothèses de travail et des contraintes (techniques, organisationnelles, etc.).
-
+### Hypothèses:
+- **Disponibilité et stabilité des sources de données** :  
+On suppose que l’API *Planifium* est accessible, stable et bien documentée, permettant de récupérer sans interruption les informations officielles sur les cours (titres, horaires, prérequis, crédits, enseignants).
+- **Collaboration des étudiants pour les avis** :    
+On suppose que les étudiants accepteront de partager leurs avis sur *Discord* ou via la plateforme, de manière volontaire et en respectant l’anonymat.
+- **Format standardisé des données** :   
+Les données issues des différentes sources (*Planifium*, résultats académiques en *CSV*, avis en *JSON*) sont supposées cohérentes, valides et intégrables sans transformation complexe
 
 
