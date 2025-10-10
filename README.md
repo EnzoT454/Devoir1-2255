@@ -21,13 +21,9 @@ Devoir1-2255/
 │  │  ├─ architecture.md         → Description de l’architecture globale  
 │  │  ├─ C4_niveau1.png          → Modèle C4 – niveau 1  
 │  │  ├─ C4_niveau2.png          → Modèle C4 – niveau 2   
-│  │  ├─ uml.md                  → Diagrammes UML  
-│  │  └─ modeles.md              → Schémas et modèles de données  
+|  |
 │  ├─ css/  
-│  │  └─ no-sidebar.css          → Feuille de style personnalisée  
-│  ├─ application.md             → Documentation sur l’application  
-│  ├─ evaluation.md              → Évaluation du projet  
-│  ├─ bilan.md                   → Bilan final  
+│  │  └─ no-sidebar.css          → Feuille de style personnalisée   
 │  └─ index.md                   → Page d’accueil du site MkDocs  
 │  
 ├─ mkdocs.yml                    → Fichier de configuration MkDocs  
