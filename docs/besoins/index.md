@@ -45,4 +45,16 @@ On suppose que les étudiants accepteront de partager leurs avis sur *Discord* o
 - **Format standardisé des données** :   
 Les données issues des différentes sources (*Planifium*, résultats académiques en *CSV*, avis en *JSON*) sont supposées cohérentes, valides et intégrables sans transformation complexe
 
+---  
+### Contraintes:
+- **Centralisation** :  
+Toutes les sources (Planifium, CSV, JSON) doivent être regroupées dans une seule interface.
 
+- **Seuil pour les avis** :  
+Un cours doit avoir au moins 5 étudiants qui ont donné leur avis (via Discord) avant que ces avis soient visibles sur la plateforme.
+
+- **Confidentialité** :  
+Aucune donnée personnelle identifiable n’est exposée, conformité à la Loi 25.
+
+- **Accessibilité** :  
+Interface simple et claire pour tous les étudiants.
