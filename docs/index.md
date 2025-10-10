@@ -18,7 +18,7 @@ title: Vue d'ensemble
 - **`M1`:** Hamza Aqel (20111814) Enzo
 - **`M2`:** Nouh Harfouche (20262136) nouh12316
 - **`M3`:** Farah Romdhane (20288662) Farah 
-- **`M4`:** Samah Tanisha Islam (matricule) #nom-utilisateur
+- **`M4`:** Samah Tanisha Islam (20219564) #tanisha_islam
 
 
 ## Description du projet
@@ -27,16 +27,15 @@ title: Vue d'ensemble
 
 | Taches                        | Terminé le    | Statut      | Responsable  |
 |-------------------------------|---------------|-------------|--------------|
-| Ouverture de projet           | 12 septembre  | ✅ Terminé  | `M`         |
-| Description du domaine        | 19 septembre  | 🔄 En cours | `M` `M`    |
-| Identification des acteurs    | 19 septembre  | 🔄 En cours | `M` `M`    |
-| Glossaire                     | 21 septembre  | ⏳ À venir  | `M`         |
-| Exigences Fonct et Non-Fonct  | 26 septembre  | ⏳ À venir  | `M` `M`    |
-| Évaluation des risques        | 26 septembre  | ⏳ À venir  | `M`         |
-| Personas                      | 29 septembre  | ⏳ À venir  | `M`         |
-| Cas d'utilisation             | 3 octobre     | ✅ À venir  | `M1`         |
+| Ouverture de projet           | 12 septembre  | ✅ Terminé  | `M1` `M2` `M3` `M4`|
+| Description du domaine        | 9 octobre     | 🔄 En cours | `M4`         |
+| Identification des acteurs    | 19 septembre  | 🔄 En cours | `M`          |
+| Glossaire                     | 7 octobre     | ✅ Terminé  | `M4`         |
+| Exigences Fonct et Non-Fonct  | 9 octobre     | ✅ Terminé  | `M4`         |
+| Évaluation des risques        | 7 octobre     | ✅ Terminé  | `M4`         |
+| Cas d'utilisation             | 3 octobre     | ✅ Terminé  | `M1`         |
 | Diagramme d'activités         | 6 octobre     | ✅ Terminé  | `M2`         |
-| Modèle C4                     | 6 octobre     | ⏳ À venir  | `M3`         |
-| Prototype fonctionnel (bonus) | 10 octobre    | ⏳ À venir  | `M1`         |
-| Rapport                       | 10 octobre    | ⏳ À venir  | `M`         |
+| Modèle C4                     | 6 octobre     | ✅ Terminé  | `M3`         |
+| Prototype fonctionnel (bonus) | 9 octobre     | ✅ Terminé  | `M1`         |
+| Rapport                       | 10 octobre    | ✅ Terminé  | `M3`         |
 

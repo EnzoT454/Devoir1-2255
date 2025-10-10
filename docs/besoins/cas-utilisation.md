@@ -8,7 +8,7 @@ title: Analyse des besoins - Cas d'utilisation
 
 Introduction aux cas d’utilisation du système.
 
-![Diagramme des cas d'utilisation](Diagramme_CUs.png)
+![Diagramme des cas d'utilisation](diagrammes/DiagrammeCUs.png)
 
 ## Liste des cas d’utilisation
 
@@ -20,7 +20,7 @@ Introduction aux cas d’utilisation du système.
 | CU04 | Recherche cours | Étudiant utilisateur | L'utilisateur effectue une recherche par sigle, code, prof |
 | CU05 | Infos cours | Étudiant utilisateur | L'utilisateur consulte les infos: plan de cours, prof, résultats académiques, avis |
 | CU06 | Comparaison de cours | Étudiant utilisateur | L'utilisateur sélectionne plusieurs cours et voit comparaison (charge, difficulté, taux de réussite) |
-| CU07 | Mis à jour cours | Administrateur | Vérifier ou corriger les infos venant de l’API si besoin |
+
 
 
 ## Détail
@@ -29,7 +29,7 @@ Introduction aux cas d’utilisation du système.
 
 **Acteurs** : Étudiant utilisateur (principal)
 **Préconditions** : L’étudiant doit avoir un compte valide déjà créé
-**PostConditions** : L’étudiant est authentifié et redirigé vers son tableau de bord
+**PostConditions** : L’étudiant est authentifié et redirigé vers la page d'accueil
 **Déclencheur** : L’étudiant saisit son identifiant et mot de passe
 **Dépendances** : CU02 (Inscription)
 **But** : Permettre à l’étudiant d’accéder à son espace personnalisé sur la plateforme
@@ -104,14 +104,14 @@ Introduction aux cas d’utilisation du système.
 **Préconditions** : L’étudiant doit être connecté (CU01)
 **PostConditions** : Une liste de résultats correspondant aux critères est affichée
 **Déclencheur** : L’étudiant saisit un critère de recherche
-**Dépendances** : CU01 (Connexion), CU07 (Mise à jour cours) si données corrigées
+**Dépendances** : CU01 (Connexion)
 **But** : Permettre à l’étudiant de trouver un cours via mot-clé, sigle ou professeur
 
 ### Scénario principal
 
 1. L’étudiant ouvre la **barre de recherche**.  
 2. L’étudiant saisit un **mot-clé** (sigle, titre, nom du prof).  
-3. Le système interroge la **base de données / API Planifium**.  
+3. Le système interroge la **base de données**.  
 4. Le système affiche la **liste des cours correspondants**.  
 5. L’étudiant sélectionne un cours de la liste.  
 
@@ -122,19 +122,16 @@ Introduction aux cas d’utilisation du système.
 - **3a.1** Le système affiche *« Aucun cours trouvé »*.  
 - **3a.2** Le scénario se termine.  
 
-### 3b. L’API Planifium est indisponible
-- **3b.1** Le système affiche *« Service temporairement indisponible »*.  
-- **3b.2** Le scénario se termine.  
 
 ---
 
 ### CU05 - Infos cours
 
-**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire)
+**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire), Prof DIRO (secondaire)
 **Préconditions** : L’étudiant doit être connecté (CU01)
 **PostConditions** : Les informations du cours sont affichées à l’écran
 **Déclencheur** : L’étudiant sélectionne un cours dans la liste de résultats (CU04)
-**Dépendances** : CU04 (Recherche cours), CU07 (Mise à jour cours)
+**Dépendances** : CU04 (Recherche cours)
 **But** : Permettre à l’étudiant de consulter le plan, l’horaire, le professeur, les résultats académiques et les avis d’un cours(s'il ya au moins 5 avis)
 
 ### Scénario principal
@@ -157,17 +154,17 @@ Introduction aux cas d’utilisation du système.
 
 ### CU06 - Comparaison de cours
 
-**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire)
+**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire), Prof DIRO (secondaire)
 **Préconditions** : L’étudiant doit être connecté (CU01) et avoir sélectionné au moins deux cours
 **PostConditions** : Un tableau comparatif est affiché à l’étudiant
-**Déclencheur** : L’étudiant clique sur l’option « Comparer » dans son panier après avoir choisi plusieurs cours.=
+**Déclencheur** : L’étudiant choisit plusieurs cours et se dirige vers page comparaison.
 **Dépendances** : CU04 (Recherche cours), CU05 (Infos cours)
 **But** : Permettre à l’étudiant de comparer plusieurs cours selon des critères (charge, difficulté, taux de réussite, retours d'autres étudiants)
 
 ### Scénario principal
 
-1. L’étudiant ajoute plusieurs cours dans son panier depuis la **recherche**. 
-2. L'étudiant va dans son panier et sélectionne **comparer les cours**. 
+1. L’étudiant ajoute plusieurs cours dans section comparaison depuis la **recherche**. 
+2. L'étudiant va dans section comparaison. 
 3. Le système récupère pour chaque cours : **charge estimée**, **taux de réussite**, **difficulté perçue**, **avis**.  
 4. Le système affiche un **tableau comparatif clair**.  
 5. L’étudiant consulte et choisit la **combinaison la plus adaptée**.  
@@ -185,13 +182,3 @@ Introduction aux cas d’utilisation du système.
 ### 3a. API Planifium ou Discord est inaccessible:
 - **2a.1** Le système affiche un message *« Les données externes ne sont pas accessibles pour le moment »*.  
 - **2a.2** Le tableau est généré avec uniquement les données internes disponibles.
----
-
-### CU07 - Mise à jour des cours
-
-**Acteurs** : Administrateur (principal), API Planifium (secondaire)
-**Préconditions** : L’administrateur est connecté avec des droits d’administration
-**PostConditions** : Les données du cours sont mises à jour dans la base et rendues disponibles aux étudiants
-**Déclencheur** : L’administrateur accède à l’interface de gestion des cours
-**Dépendances** : Aucune
-**But** : Permettre à l’administrateur de corriger ou compléter les données venant de l’API (ex. prof ou horaire modifié)

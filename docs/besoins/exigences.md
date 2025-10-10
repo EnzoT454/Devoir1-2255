@@ -5,26 +5,44 @@ title: Analyse des besoins - Exigences
 # Exigences
 
 ## Exigences fonctionnelles
-
-TODO: Liste des fonctions que le système doit accomplir.
-
-Exemple :
-
-- [ ] EF1 : L’utilisateur peut créer un compte.
-- [ ] EF2 : Le système envoie un courriel de confirmation.
+- [ ] EF1 : L'étudiant peut s'inscrire à la plateforme avec ses identifiants UdeM
+- [ ] EF2 : L'étudiant peut se connecter à la plateforme
+- [ ] EF3 : L'étudiant peut personaliser son profil
+- [ ] EF4 : L'étudiant peut rechercher des cours par son code ou son titre
+- [ ] EF5 : L'étudiant peut consulter les informations complètes d'un cours (horaire, professeur, plan de cours, etc)
+- [ ] EF6 : Le système permet d'afficher les avis étudiants après un mimimum de 5 avis
+- [ ] EF7 : L'étudiant peut comparer plusieurs cours
+- [ ] EF8 : Le système centralise dans une interface les données de Planifium, des avis Discord anisi que les résultats académiques 
 
 ## Exigences non fonctionnelles
 
-TODO: Contraintes de performance, sécurité, compatibilité, etc.
 
-Exemple :
 
-- [ ] ENF1 : Le système doit répondre en moins de 2 secondes.
-- [ ] ENF2 : L'application doit être compatible avec Chrome et Firefox.
+- [ ] ENF1 : Interface simple et claire pour tous les étudiants
+- [ ] ENF2 : Compatible avec les navigateurs (Firefox, Google, Safari)
+- [ ] ENF3 : Aucune données personelle identifiable (conformité Loi 25)
+
 
 ## Priorisation
 
-TODO: Identifier les exigences critiques.
+
+### Exigences Critique
+- EF1: Authentification (Accès sécurisé à la plateforme)
+- EF2 : Connexion à la plateforme
+- EF4 : Recherche de cours
+- EF6 : Affichage des avis 
+- EF8 : Gestion de la section de comparaison
+- EF9 : Comparaison des cours
+- EF11 : Centralisation des données
+- ENF1 : Interface utilisateur
+- ENF3 : Confidentialité
+
+##  Exigences secondaire
+- EF3 : Profil personnel
+- ENF2 : Compatibilité avec les navigateurs
+
+
+
 
 ## Types d'utilisateurs
 
@@ -32,19 +50,18 @@ TODO: Identifier les exigences critiques.
 
 | Type d’utilisateur | Description | Exemples de fonctionnalités accessibles |
 |--------------------|-------------|------------------------------------------|
-| Utilisateur invité | Accès limité, pas d’authentification | Consultation des ressources |
-| Utilisateur authentifié | Compte personnel, fonctions principales | Réservation, historique |
-| Administrateur | Droits étendus, gestion des ressources | Création/suppression de ressources, gestion des utilisateurs |
+| Utilisateur non authentifié | Accès limité sans connexion | Accès à la page d'inscription |
+| Utilisateur authentifié | Utilisateur connecté | Recherche, personalise profil, comparaisons de cours |
+| Administrateur | Gestionnaire de la plateforme | Création/suppression de ressources, gestion des utilisateurs, gestion des données|
 
-<!-- TODO: Détailler selon le périmètre du projet. -->
 
 ## Infrastructures
 
 > Informations sur l’environnement d’exécution cible, les outils ou plateformes nécessaires.
 
 - Le système sera hébergé sur un serveur Ubuntu 22.04.
+- Langage principal : Java
+- Frontend : HTML, CSS et JavaScript
 - Base de données : PostgreSQL version 15.
-- Serveur Web : Nginx + Gunicorn (pour une app Python, par exemple).
-- Framework principal : [À spécifier selon le projet].
-
-<!-- TODO: Compléter selon le stack technique prévu. -->
+- Serveur Web : Nginx 
+- Framework principal : Springboot
