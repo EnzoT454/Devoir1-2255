@@ -10,6 +10,31 @@ title: Analyse des besoins - Présentation générale
 
 ## Description du domaine
 
+### Processus métier existants:
+À l'heure actuelle, un étudiant doit naviguer entre multiples sources
+d'information pour organiser son emploi du temps :
+
+Il se réfère d’abord à Planifium pour obtenir les données officielles
+sur les cours (les horaires, les programmes, les crédits et les
+prérequis). Ces informations sont précises, mais elles n'offrent aucun
+aperçu de la charge effective ou de la complexité.
+
+Ensuite, il doit consulter les plans de cours afin de comprendre la
+structure, le contenu et les méthodes d’évaluation.
+
+Pour compléter ces données , l’étudiant cherche des avis informels
+(Discord, forums, amis ) pour recueillir des avis : volume de travail,
+degré de difficulté, recommandations. Ces données, bien que
+fréquemment utiles, sont généralement dispersées.
+
+Enfin, il doit combiner toutes ces informations avec ses propres
+contraintes (emploi, rythme, intérêts), tout en vérifiant les prérequis,
+les cycles et les éventuels conflits d’horaire.
+
+Par conséquent, chaque étudiant doit lui-même combiner et
+interpréter toutes ces données, ce qui prend du temps et peut
+conduire à des décisions peu optimales.
+
 ### Fonctionnement
 Le système est basé sur une architecture client–serveur:
 - Le frontend (HTML, CSS, JavaScript) offre une interface qui permet aux étudiants de naviguer facilement dans la plateforme et interagir avec les fonctionalités principales
