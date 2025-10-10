@@ -1,12 +1,12 @@
 
 
-## CoursAdvisor (Brève description)
+# CoursAdvisor (Brève description)
  
 **CoursAdviso** est une plateforme web destinée aux étudiants du DIRO (Université de Montréal).
 Elle centralise les données provenant de Planifium, des résultats académiques fournis par les enseignants ou les auxiliaires et des avis étudiants collectés via Discord, afin d’aider les étudiants à choisir leurs cours de manière éclairée.
 L’application permet de rechercher, comparer et consulter des cours tout en personnalisant les recommandations selon le profil de l’étudiant.
 
-## 🗂️ Organisation du répertoire
+# 🗂️ Organisation du répertoire
 
 
 Devoir1-2255/  
@@ -37,9 +37,12 @@ Devoir1-2255/
 
 
 
-# Template de site web pour IFT2255
+# Prototype interactif
 
-Ce projet est un template pour le rapport à produire pour le cours IFT2255 (Génie logiciel), construit avec [MkDocs](https://www.mkdocs.org/) et le thème [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+Voici le lien permettant de visualiser le prototype interactif initial [Prototype](https://www.figma.com/make/oLDVLNKRifwxeUm5kLpRos/CourAdvisor--Copy-?node-id=0-1&p=f&t=6YJ55hxH3yMLNSCu-0&fullscreen=1).
+
+Pour vous connecter, vous pouvez utiliser une adresse courriel au format suivant : aaaaa@aa.aa, ainsi que n’importe quel mot de passe.
+
 
 ## Prérequis
 
@@ -51,23 +54,6 @@ Assurez-vous d’avoir les outils suivants installés :
   - Évite de polluer votre système et les conflits de version.
   - Installez-le avec `pip install pipenv`.
 
-## Pour commencer
-
-### Option 1: Le répertoire n'est pas encore créé
-
-1. Cliquez sur le bouton `Use this template` sur GitHub.
-2. Choisissez l'option `Create a new repository`.
-3. À la fin des étapes, vous devriez avoir un nouveau répertoire avec le contenu du template.
-
-### Option 2: Le répertoire existe déjà
-
-1. Clonez ce dépôt (optionnel) pour obtenir le template localement 
-```bash
-git clone git@github.com:udem-diro/template-rapport-ift2255.git
-```
-2. Copiez les fichiers du template (en local) dans votre répertoire de projet.
-
-> Note : Cette option est utile si vous souhaitez récupérer le contenu du template sans créer un nouveau dépôt (répertoire).
 
 ## Installation
 
@@ -126,11 +112,6 @@ mkdocs gh-deploy
 - `requirements.txt` : Dépendances Python
 - `site/` : Site généré (créé lors de la construction) -- *optionnel*
 
-## Personnalisation
-
-1. Modifiez `mkdocs.yml` pour changer la configuration du site
-2. Ajoutez/modifiez les fichiers Markdown (`.md`) dans `docs/`
-3. Personnalisez le thème en modifiant les paramètres dans `mkdocs.yml`
 
 ## Licence
 
