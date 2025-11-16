@@ -14,107 +14,107 @@ Introduction aux cas d’utilisation du système.
 
 | ID | Nom | Acteurs principaux | Description |
 |----|-----|---------------------|-------------|
-| CU01 | Connexion | Étudiant utilisateur | L'utilisateur se connecte à l'application |
-| CU02 | Inscription | Étudiant utilisateur | L'utilisateur crée un compte |
-| CU03 | Profil | Étudiant utilisateur | L'utilisateur indique ses préférences |
-| CU04 | Recherche cours | Étudiant utilisateur | L'utilisateur effectue une recherche par sigle, code, prof |
-| CU05 | Infos cours | Étudiant utilisateur | L'utilisateur consulte les infos: plan de cours, prof, résultats académiques, avis |
-| CU06 | Comparaison de cours | Étudiant utilisateur | L'utilisateur sélectionne plusieurs cours et voit comparaison (charge, difficulté, taux de réussite) |
+| CU01 | Se connecter | Étudiant utilisateur | L'utilisateur se connecte à l'application |
+| CU02 | S'inscrire à la plateforme | Étudiant utilisateur | L'utilisateur crée un compte |
+| CU03 | Personaliser mon profil | Étudiant utilisateur | L'utilisateur indique ses préférences |
+| CU04 | Rechercher un cours | Étudiant utilisateur | L'utilisateur effectue une recherche par sigle, code, prof |
+| CU05 | Voir les détails d'un cours | Étudiant utilisateur | L'utilisateur consulte les infos: plan de cours, prof, résultats académiques, avis |
+| CU06 | Comparer les cours | Étudiant utilisateur | L'utilisateur sélectionne plusieurs cours et voit comparaison (charge, difficulté, taux de réussite) |
 
 
 
 ## Détail
 
-## CU01 - Connexion
+## CU01 - Se connecter
 
 **Acteurs** : Étudiant utilisateur (principal)
 **Préconditions** : L’étudiant doit avoir un compte valide déjà créé
 **PostConditions** : L’étudiant est authentifié et redirigé vers la page d'accueil
 **Déclencheur** : L’étudiant saisit son identifiant et mot de passe
-**Dépendances** : CU02 (Inscription)
+**Dépendances** : CU02-S'inscrire à la plateforme (extend) utilisé uniquement si le compte n'existe pas.
 **But** : Permettre à l’étudiant d’accéder à son espace personnalisé sur la plateforme
 
 ### Scénario principal
 
 1. L’étudiant ouvre la page de connexion.  
 2. L’étudiant saisit son **courriel** et **mot de passe**.  
-3. Le système vérifie les informations.  
-4. Le système authentifie l’étudiant.  
-5. Le système affiche le **tableau de bord personnalisé**.  
+3. Le système vérifie la présence d'un compte associé.  
+4. Le système vérifie la validité du mot de passe.
+5. Le système génère une session d’utilisateur.
+6. Le système affiche le **tableau de bord personnalisé**.  
 
-### Scénarios alternatifs
+### Scénarios alternatifs 
 
-### 3a. Le mot de passe est incorrect
-- **3a.1** Le système affiche *« Mot de passe incorrect »*.  
-- **3a.2** Le scénario reprend à l’étape 2.  
+### 3a. Aucun compte trouvé (Extend CU02 : S’inscrire à la plateforme est activé ici)
+- **3b.1** Le système affiche *« Aucun compte associé à cet email »*.  
+- **3b.2** L’étudiant peut choisir de s’inscrire (CU02).  
 
-### 3b. Le compte n’existe pas
-- **3b.1** Le système affiche *« Aucun compte trouvé avec cet email »*.  
-- **3b.2** L’étudiant peut choisir de s’inscrire.  
+### 4a. Le mot de passe est incorrect
+- **4a.1** Le système affiche *« Mot de passe incorrect »*.  
+- **4a.2** Le scénario reprend à l’étape 2. 
 
 ---
 
-## CU02 - Inscription
+## CU02 - S'inscrire à la plateforme
 
 **Acteurs** : Étudiant utilisateur (principal)
 **Préconditions** : L’étudiant n’a pas encore de compte sur la plateforme
 **PostConditions** : Un compte étudiant est créé et stocké dans la base de données
 **Déclencheur** : L’étudiant clique sur “S’inscrire” et fournit les informations requises
 **Dépendances** : Aucune
-**But** : Permettre à un nouvel étudiant de créer un compte sur la plateforme
+**But** : Enregistrer un nouvel étudiant et créer son compte
 
 
 ### Scénario principal
 
 1. L’étudiant ouvre la page d’inscription.  
-2. L’étudiant saisit son **nom**, **matricule**, **courriel** et **mot de passe**.  
-3. Le système vérifie que tous les champs obligatoires sont remplis.  
-4. Le système vérifie que le courriel n’est pas déjà enregistré.  
-5. Le système enregistre les informations dans la base de données.  
+2. Il remplit les champs obligatoires : **nom**, **matricule**, **courriel** et **mot de passe**.  
+3. Le système vérifie que tous les champs sont remplis correctement.  
+4. Le système vérifie que le courriel n’est pas déjà utilisé.  
+5. Le système crée un nouvel enregistrement en base de données.  
 6. Le système confirme la création du compte.  
-7. L’étudiant peut maintenant se connecter.  
+7. L’étudiant peut maintenant se connecter (CU01) (include).  
 
 
 ### Scénarios alternatifs
 
-### 3a. Des champs sont manquants
-- **3a.1** Le système indique les champs à remplir.  
+### 3a. Des champs sont manquants ou invalides
+- **3a.1** Le système indique les champs à corriger.  
 - **3a.2** Le scénario reprend à l’étape 2.  
 
 ### 4a. Le courriel est déjà utilisé
-- **4a.1** Le système informe l’étudiant que le compte existe déjà.  
-- **4a.2** Le scénario se termine : l’étudiant peut choisir **« Connexion »** à la place.  
+- **4a.1** Le système affiche « Ce courriel est déjà associé à un compte ». 
+- **4a.2** L’étudiant est invité à aller vers CU01 (include).
 
 ---
 
-### CU03 - Profil
+### CU03 - Personaliser mon profil
 
 **Acteurs** : Étudiant utilisateur (principal)
 **Préconditions** : L’étudiant doit être connecté (CU01)
 **PostConditions** : Les préférences de l’étudiant sont enregistrées et associées à son compte
 **Déclencheur** : L’étudiant clique sur la section “Mon profil”
-**Dépendances** : CU01 (Connexion)
+**Dépendances** : CU01- Se connecter (include)
 **But** : Permettre à l’étudiant d’indiquer ses préférences pour recevoir des recommandations personnalisées
 
 ---
 
-### CU04 - Recherche cours
+### CU04 - Rechercher un cours
 
 **Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire)
 **Préconditions** : L’étudiant doit être connecté (CU01)
 **PostConditions** : Une liste de résultats correspondant aux critères est affichée
 **Déclencheur** : L’étudiant saisit un critère de recherche
-**Dépendances** : CU01 (Connexion)
-**But** : Permettre à l’étudiant de trouver un cours via mot-clé, sigle ou professeur
+**Dépendances** : CU05- Voir les détails d'un cours (include) lorsque l’étudiant clique sur un résultat 
+**But** : Permettre à l’étudiant de trouver un cours selon différents critères comme mot-clé, sigle ou professeur
 
 ### Scénario principal
 
 1. L’étudiant ouvre la **barre de recherche**.  
 2. L’étudiant saisit un **mot-clé** (sigle, titre, nom du prof).  
-3. Le système interroge la **base de données**.  
+3. Le système interroge la **base de données interne**.  
 4. Le système affiche la **liste des cours correspondants**.  
-5. L’étudiant sélectionne un cours de la liste.  
-
+5. L’étudiant sélectionne un cours -> déclenche CU05 (include).  
 
 ### Scénarios alternatifs
 
@@ -125,60 +125,74 @@ Introduction aux cas d’utilisation du système.
 
 ---
 
-### CU05 - Infos cours
+### CU05 - Voir les détails d'un cours
 
-**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire), Prof DIRO (secondaire)
+**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire)
 **Préconditions** : L’étudiant doit être connecté (CU01)
 **PostConditions** : Les informations du cours sont affichées à l’écran
 **Déclencheur** : L’étudiant sélectionne un cours dans la liste de résultats (CU04)
-**Dépendances** : CU04 (Recherche cours)
-**But** : Permettre à l’étudiant de consulter le plan, l’horaire, le professeur, les résultats académiques et les avis d’un cours(s'il ya au moins 5 avis)
+**Dépendances** : CU04- Rechercher un cours (include) + Consulter les avis (extend) + filter les avis (extend)
+**But** : Permettre à l’étudiant de consulter le plan, l’horaire, le professeur, les résultats académiques, degré de difficulté, charge de travail et les avis d’un cours(s'il ya au moins 5 avis)
 
 ### Scénario principal
 
-1. L’étudiant sélectionne un cours dans les **résultats de recherche**.  
-2. Le système récupère les **données** (plan de cours, horaire, prof, résultats académiques).  
-3. Le système récupère les **avis étudiants**.  
-4. Le système affiche toutes les informations dans une **fiche de cours**.  
+1. L’étudiant sélectionne un cours dans les **résultats de recherche** (CU04).  
+2. Le système récupère les **données officielles** (description de cours, horaire, prof).  
+3. Le système récupère les **résultats académiques**. 
+4. Le système récupère les **avis étudiants** via Discord.  
+5. Le système vérifie si au moins 5 avis sont disponibles (Extend : Consulter les avis).  
+6. Le système affiche toutes les informations dans une **fiche de cours**: horaire, plan, prof, charge, difficulté, réussite, avis.  
 
 
 ### Scénarios alternatifs
 
-### 2a. Les résultats académiques ne sont pas disponibles
-- **2a.1** Le système affiche seulement les **infos officielles** et les **avis**.  
+### 3a. Les résultats académiques ne sont pas disponibles
+- **3a.1** Le système affiche « Données académiques non disponibles ».  
+- **3a.2** Continuer à l’étape 4.  
 
-### 3a. Pas encore assez d’avis étudiants (n < 5)
-- **3a.1** Le système affiche un message *« Pas encore d’avis disponibles »*.  
+### 5a. Moins de 5 avis disponibles (extend CU : Consulter avis désactivé + extend CU : Filtrer les avis désactivé)
+- **5a.1** Le système affiche un message *« Pas encore d’avis disponibles »*.  
+- **5a.2** La fiche est affichée sans section avis.  
+
+### 6a. Besoin de filtrer les avis (extend CU : Filtrer les avis)
+- **6a.1** Dans la section avis, l’étudiant demande un filtrage (par note, par semestre).  
+- **6a.2** Le système applique les filtres.  
 
 ---
 
-### CU06 - Comparaison de cours
+### CU06 - Comparer les cours
 
-**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire), Prof DIRO (secondaire)
+**Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire)
 **Préconditions** : L’étudiant doit être connecté (CU01) et avoir sélectionné au moins deux cours
 **PostConditions** : Un tableau comparatif est affiché à l’étudiant
 **Déclencheur** : L’étudiant choisit plusieurs cours et se dirige vers page comparaison.
-**Dépendances** : CU04 (Recherche cours), CU05 (Infos cours)
-**But** : Permettre à l’étudiant de comparer plusieurs cours selon des critères (charge, difficulté, taux de réussite, retours d'autres étudiants)
+**Dépendances** : CU04 (Recherche cours), CU05 (Infos cours), “Annuler une sélection” (extend)
+**But** : Aider l’étudiant à comparer plusieurs cours selon des critères objectifs (charge, difficulté, réussite, avis)
 
 ### Scénario principal
 
 1. L’étudiant ajoute plusieurs cours dans section comparaison depuis la **recherche**. 
-2. L'étudiant va dans section comparaison. 
-3. Le système récupère pour chaque cours : **charge estimée**, **taux de réussite**, **difficulté perçue**, **avis**.  
+2. L'étudiant ouvre la page de comparaison. 
+3. Le système récupère pour chaque cours : **charge estimée**(Planifium), **taux de réussite**, **difficulté perçue**, **avis** (avec même logique que CU05).  
 4. Le système affiche un **tableau comparatif clair**.  
-5. L’étudiant consulte et choisit la **combinaison la plus adaptée**.  
+5. L’étudiant analyse les différences et choisit un cours.  
 
 
 ### Scénarios alternatifs
 
 ### 1a. L’étudiant ne sélectionne qu’un seul cours
 - **1a.1** Le système affiche un message *« Sélectionnez au moins 2 cours pour comparer »*.  
+- **1a.1** Fin.  
 
-### 2a. Les données pour un des cours sont incomplètes
+### 2a. Les données pour un des cours sont incomplètes (Pas assez d'avis pour un cours donné n<5 )
 - **2a.1** Le système affiche un avertissement *« Informations partielles pour ce cours »*.  
-- **2a.2** Le tableau reste affiché avec les données disponibles.
+- **2a.2** Le tableau reste affiché avec les données disponibles.  
+
+### 2a. L’étudiant retire un cours (Extend : Annuler une sélection)
+- **2a.1** L’étudiant supprime un cours du panier de comparaison.  
+- **2a.2** Le système met à jour la liste.  
+- **2a.3** Si moins de 2 cours, retour à l’alternative 1a.  
 
 ### 3a. API Planifium ou Discord est inaccessible:
 - **2a.1** Le système affiche un message *« Les données externes ne sont pas accessibles pour le moment »*.  
-- **2a.2** Le tableau est généré avec uniquement les données internes disponibles.
+- **2a.2** Le tableau est généré avec uniquement les données internes disponibles.  
