@@ -11,8 +11,7 @@ title: Analyse des besoins - Présentation générale
 ## Description du domaine
 
 ### Processus métier existants:
-À l'heure actuelle, un étudiant doit naviguer entre multiples sources
-d'information pour organiser son emploi du temps :
+À l'heure actuelle, un étudiant doit naviguer entre multiples sources d'information pour organiser son emploi du temps :
 
 Il se réfère d’abord à Planifium pour obtenir les données officielles
 sur les cours (les horaires, les programmes, les crédits et les
@@ -26,6 +25,8 @@ Pour compléter ces données , l’étudiant cherche des avis informels
 (Discord, forums, amis ) pour recueillir des avis : volume de travail,
 degré de difficulté, recommandations. Ces données, bien que
 fréquemment utiles, sont généralement dispersées.
+
+L'étudiant peut également prendre rendez-vous avec un TGDE ou un conseiller pédagogique. Ces rencontres permettent de vérifier son cheminement, de confirmer les prérequis, d’éviter les conflits d’horaire et d’obtenir des recommandations adaptées à son programme ou à sa situation académique.
 
 Enfin, il doit combiner toutes ces informations avec ses propres
 contraintes (emploi, rythme, intérêts), tout en vérifiant les prérequis,
@@ -48,9 +49,9 @@ Le système est basé sur une architecture client–serveur:
 | Acteur | Rôle principal | Objectifs |
 |-------------|--------------------|----------------|
 | Étudiant utilisateur | Utilisateur principal du système | Consulter les cours, s’inscrire ou se désinscrire, consulter ou publier des avis sur les cours et enseignants. |
-| Professeurs / Auxiliaires d’enseignement | Fournisseurs d’information pédagogique et de résultats académiques | fournissent les plans de cours et mettent à jour les informations en lien avec un cours|
-| API| Source de données | Fournir les données officielles relatives aux cours, aux horaires et aux inscriptions |
-| Discord | Plateforme de communication externe | Faciliter les échanges entre étudiants et consultation des avis sur les cours |
+| Professeurs / Auxiliaires d’enseignement | Fournisseurs d’information pédagogique et de résultats académiques | Fournissent les plans de cours et mettent à jour les informations en lien avec un cours|
+| Conseiller pédagogique| Accompagnateur académique | Répondre aux questions sur le cheminement, valider les choix de cours, informer sur les règlements du programme. |
+| TGDE | Support administratif | Vérifier les prérequis, résoudre les problèmes d’inscription et assurer le suivi administratif du dossier étudiant. |
 
 
 ### Dépendances
@@ -79,7 +80,7 @@ Toutes les sources (Planifium, CSV, JSON) doivent être regroupées dans une seu
 Un cours doit avoir au moins 5 étudiants qui ont donné leur avis (via Discord) avant que ces avis soient visibles sur la plateforme.
 
 - **Confidentialité** :  
-Aucune donnée personnelle identifiable n’est exposée, conformité à la Loi 25.
+ Aucune donnée personnelle identifiable ne doit être enregistrée ou affichée. Toutes les informations doivent être anonymes avant d’être stockées ou consultées.
 
 - **Accessibilité** :  
-Interface simple et claire pour tous les étudiants.
+La plateforme doit être simple, claire et utilisable par tous les étudiants, y compris ceux ayant des limitations technologiques ou fonctionnelles. L’interface doit offrir une navigation intuitive, une lisibilité adéquate et demeurer fonctionnelle sur tous les navigateurs.
