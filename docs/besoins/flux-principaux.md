@@ -20,7 +20,7 @@ Ils permettent d’observer les différentes étapes des scénarios d’utilisat
 
 ---
 
-Ainsi, les diagrammes montrent clairement comment les acteurs atteignent leurs objectifs que ce soit se connecter, s’inscrire, consulter ,comparer des cours, recherche un cours ou encore gérer les mises à jour.
+Ainsi, les diagrammes montrent clairement comment les acteurs atteignent leurs objectifs que ce soit se connecter, s’inscrire, consulter ,comparer des cours ou recherche un cours 
 
 ### Diagrammes :
 ## Diagramme global
@@ -44,9 +44,6 @@ Ainsi, les diagrammes montrent clairement comment les acteurs atteignent leurs o
 ## CU06 - Comparaison de cours
 ![Diagramme CU06](diagrammes/Activity%20Diagram%20Comparaison%20de%20cours.png)
 
-## CU07 - Mise à jour des cours
-![Diagramme CU07](diagrammes/Activity%20Diagram%20mise%20a%20jour%20des%20cours.png)
-
 
 ### Description des flux complexes
 
@@ -58,13 +55,12 @@ Dans certains cas, les activités ne se déroulent pas toujours de manière simp
 
 **CU03 – Profil :** l’étudiant peut modifier ses préférences. il dépend de la connexion préalable (CU01), et les modifications sont enregistrées pour personnaliser ses recommandations.
 
-**CU04 – Recherche cours :** l’étudiant saisit un critère de recherche et le système interroge l’API Planifium. Si aucun cours ne correspond, un message est affiché. Si l’API est indisponible, le flux s’arrête et l’étudiant est informé.
+**CU04 – Recherche cours :** l’étudiant saisit un critère de recherche et le système interroge l’API Planifium. Si aucun cours ne correspond, un message est affiché. 
 
 **CU05 – Infos cours :** lorsque l’étudiant sélectionne un cours, le système récupère les informations détaillées (plan, horaires, professeur, résultats académiques et avis). Si les avis sont insuffisants ou que certains résultats ne sont pas disponibles, le système adapte l’affichage en conséquence.
 
 **CU06 – Comparaison de cours :** pour comparer plusieurs cours, les informations sont récupérées puis regroupées dans le tableau final à l’étudiant .Si l’étudiant n’a sélectionné qu’un seul cours, un message lui demande de choisir au moins deux cours. Si certaines données sont incomplètes ou si les services externes sont indisponibles, le tableau est généré avec ce qui est disponible.
 
-**CU07 – Mise à jour des cours :** l’administrateur accède à l’interface pour corriger ou compléter les données dans l’API. Une fois les modifications appliquées, les informations sont enregistrées et mises à jour pour tous les étudiants.
 
 ---
 Ces flux complexes montrent comment le système gère les erreurs, les boucles et la communication avec des services externes, tout en garantissant que les utilisateurs peuvent atteindre leurs objectifs dans différentes situations.
