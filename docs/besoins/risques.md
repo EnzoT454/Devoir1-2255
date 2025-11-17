@@ -26,31 +26,33 @@ title: Analyse des besoins - Risques
   - Anonymiser tous les messages avant leurs enregistrement
   - Consultation avec le bureau de conformité de l'UdeM
 
-### Risque 3 - Diversité des expériences
+### Risque 3 - Biais dans les avis des étudiants
 - **Probabilité** : Élevée
 - **Sévérité** : Moyenne
-- **Impact** : Les avis peuvent varier selon le profil des étudiants (internationaux, début de parcours, fin de parcours, 1er cycle, 2e cycle), ce qui peut engendrer de la confusion. 
+- **Impact** : Certains avis peuvent être exagérés ou non représentatifs, ce qui risque de donner une perception incorrecte d'un cours ou d'un professeur. Les différences entre les profils étudiants peuvent également introduire des biais, ce qui rend l'interprétation des avis plus complexe.
 - **Plan de mitigation** :  
-  - Filtres personalisés qui permet de voir les avis par profil similaire
-  - Ajouter un indicateur de fiabilité associé à chaque ensemble d'avis, basé sur le nombre de retours et la diversité des participants 
+  - Ajouter des filtres personnalisés permettant de voir les avis des étudiants par session, par profil et par ancienneté
+  - Afficher un indicateur de fiabilité basé sur la quantité et la diversité des avis reçus
+  - Mentionner explicitement les biais potentiels afin d’aider les utilisateurs à interpréter correctement les avis
 
-### Risque 4 - Dépendance aux données officielles
-- **Problème** : externe (dépendance aux sources de données)
+### Risque 4 - Dépendance aux données externes (Planifium et Discord)
 - **Probabilité** : Moyenne  
 - **Sévérité** : Moyenne 
-- **Impact** : Une indisponibilité ou une mise à jour tardive de Planifium ou des résultats académiques limiterait la fiabilité du système.
+- **Impact** : Si Planifium ou Discord arrêtent de fonctionner ou ne se mettent pas à jour à temps, certaines informations sur les cours risquent d’être incomplètes ou incorrectes sur la plateforme.   
 - **Plan de mitigation** :  
-  - Mettre en place une sauvegarde locale des données Planifium
-  - Ajouter une fonction de mise à jour manuelle pour les administrateurs
+  - Sauvegarder localement les données importantes pour réduire l'impact d'une panne si une source devient temporairement inaccessible
+  - Permettre aux administrateurs de mettre à jour manuellement les informations si une API externe est en panne.
+  - Avertir les utilisateurs quand certaines données ne peuvent pas être chargées à cause d’un problème externe.
 
 ### Risque 5 – Fiabilité et performance du système
 - **Problème** : interne (architecture et charge du système)
 - **Probabilité**  : Moyenne
 - **Sévérité** : Élevée
-- **Impact** : Si le serveur subit des ralentissements (lenteur des appels API, surcharge, erreurs de connexion), les utilisateurs peuvent abandonner la plateforme, réduisant ainsi son adoption.
+- **Impact** : Si le serveur devient lent ou surchargé, certaines fonctionnalités peuvent temporairement ne plus répondre, ce qui entraîne une perte d'accès aux informations. Cela reste temporaire, mais pourrait nuire à l'expérience de l'utilisateur, surtout en période de forte utilisation.
 - **Plan de mitigation** :
   - Mettre en place un cache local pour éviter d’appeler trop souvent l’API Planifium.
-  - Effectuer des tests de charge avant la mise en ligne.
+  - Effectuer des tests de charge avant la mise en ligne afin de simuler les périodes de forte demande.
+  - Surveiller la performance du serveur afin de détecter les ralentissements rapidement
 
 ## Modification du processus opérationnel
 
