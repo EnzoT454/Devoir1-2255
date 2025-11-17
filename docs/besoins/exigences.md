@@ -17,10 +17,11 @@ title: Analyse des besoins - Exigences
 ## Exigences non fonctionnelles
 
 
-
-- [ ] ENF1 : Interface simple et claire pour tous les étudiants
-- [ ] ENF2 : Compatible avec les navigateurs (Firefox, Google, Safari)
-- [ ] ENF3 : Aucune données personelle identifiable (conformité Loi 25)
+- [ ] ENF1 : Interface doit être simple et claire afin que tous les étudiants puissent l'utiliser facilement, peu importe leur niveau de familiarité avec les outils numériques.
+- [ ] ENF2 : la plateforme doit fonctionner correctement sur les principaux navigateurs comme Firefox, Google, Safari et Microsoft Edge.
+- [ ] ENF3 : Aucune données personelle ne doit être visible ou enregistrée. Le système doit respecter la Loi 25 sur la confidentialité.
+- [ ] ENF4 : Les pages doivent se charger en moins de 3 secondes afin d'assurer une navigation fluide.
+- [ ] ENF5 : Le système doit rester accessible la majorité du temps afin de limiter les interruptions de service.
 
 
 ## Priorisation
@@ -31,11 +32,13 @@ title: Analyse des besoins - Exigences
 - EF2 : Connexion à la plateforme
 - EF4 : Recherche de cours
 - EF6 : Affichage des avis 
-- EF8 : Gestion de la section de comparaison
+- EF7 : Comparaison des cours
+- EF8 : Centralisation des données
 - EF9 : Comparaison des cours
-- EF11 : Centralisation des données
-- ENF1 : Interface utilisateur
-- ENF3 : Confidentialité
+- ENF1 : Interface simple et claire
+- ENF3 : Confidentialité Loi 25
+- ENF4 : Temps de chargement de 3 secondes
+- ENF5 : Accessibilité du système
 
 ##  Exigences secondaire
 - EF3 : Profil personnel
