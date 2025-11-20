@@ -219,7 +219,7 @@ Introduction aux cas d’utilisation du système.
 
 ---
 
-### CU07 - Comparer de choix de cours
+### CU07 - Comparer deux choix de cours
 
 **Acteurs** : Étudiant utilisateur (principal), API Planifium (secondaire), Discord (secondaire).
 **Préconditions** : L’étudiant doit être connecté (CU01), l’étudiant a constitué au moins deux choix, chacun contenant au minimum deux cours (Cas: Créer un ensemble de cours - include).
