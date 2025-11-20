@@ -26,23 +26,26 @@ Ainsi, les diagrammes montrent clairement comment les acteurs atteignent leurs o
 ## Diagramme global
 ![Diagramme global](diagrammes/Activity%20Diagram%20Global.png)
 
-## CU01 - Connexion
+## CU01 - Se connecter
 ![Diagramme CU01](diagrammes/Activity%20Diagram%20connexion.png)
 
-## CU02 - Inscription
+## CU02 - S'inscrire à la plateforme
 ![Diagramme CU02](diagrammes/Activity%20Diagram%20Inscription.png)
 
-## CU03 - Profil
+## CU03 - Personaliser mon profil
 ![Diagramme CU03](diagrammes/Activity%20Diagram%20Profil.png)
 
-## CU04 - Recherche cours
+## CU04 - Rechercher un cours
 ![Diagramme CU04](diagrammes/Activity%20Diagram%20Recherche%20cours.png)
 
-## CU05 - Infos cours
+## CU05 - Voir les détails d'un cours
 ![Diagramme CU05](diagrammes/Activity%20Diagram%20Infos%20cours.png)
 
-## CU06 - Comparaison de cours
+## CU06 - Comparer les cours
 ![Diagramme CU06](diagrammes/Activity%20Diagram%20Comparaison%20de%20cours.png)
+
+## CU07 - Comparer deux choix de cours
+![Diagramme CU07](diagrammes/Activity%20Diagram%20Comparer%20deux%20choix%20de%20cours.png)
 
 
 ### Description des flux complexes
@@ -61,6 +64,7 @@ Dans certains cas, les activités ne se déroulent pas toujours de manière simp
 
 **CU06 – Comparaison de cours :** pour comparer plusieurs cours, les informations sont récupérées puis regroupées dans le tableau final à l’étudiant .Si l’étudiant n’a sélectionné qu’un seul cours, un message lui demande de choisir au moins deux cours. Si certaines données sont incomplètes ou si les services externes sont indisponibles, le tableau est généré avec ce qui est disponible.
 
+**CU07 - Comparer deux choix de cours :** Le système compare deux ensembles de cours créés par l’étudiant. Il vérifie que les deux choix sont valides, récupère les données nécessaires (Planifium, résultats, avis) et signale les informations manquantes. Même en cas de données partielles ou de services externes indisponibles, un tableau comparatif est généré pour permettre à l’étudiant de choisir la meilleure combinaison.
 
 ---
 Ces flux complexes montrent comment le système gère les erreurs, les boucles et la communication avec des services externes, tout en garantissant que les utilisateurs peuvent atteindre leurs objectifs dans différentes situations.
